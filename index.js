@@ -33,10 +33,9 @@ class Neighborhood {
   // returns a unique list of meals that have been ordered in a particular neighborhood
   //(you might want to do this one last)
   meals() {
-    let allMeals = this.deliveries().map(x => x.meal()
-  })
+    const customerMeals = this.customers().map(customer => customer.meals());
     const allMeals = [].concat.call([], customerMeals);
-    return Array.from(new Set(initial))
+    return [...new Set(allMeals)];
   }
 }
 
