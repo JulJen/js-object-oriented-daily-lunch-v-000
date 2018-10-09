@@ -40,43 +40,31 @@ class Neighborhood {
 }
 
 
-//
-// class Neighborhood {
-//   constructor(name) {
-//     this.id = ++neighborhoodId;
-//     this.name = name;
-//
-//     store.neighborhoods.push(this)
-//   }
-//    // Customer belongs to neighborhood
-//    // A neighborhood has many customers through deliveries
-//   customers() {
-//     return store.customers.filter(customer => {
-//       return customer.neighborhood === this.id
-//     })
-//   }
-//
-//   meals() {
-//     const allMeals = this.customers().map(customer => customer.meals());
-//     const merged = [].concat.apply([], allMeals);
-//     return [...new Set(merged)];
-//   }
-//
-//    // A neighborhood has many deliveries
-//   deliveries(){
-//     return store.deliveries.filter(delivery => {
-//       return delivery.neighborhood === this.id
-//     })
-//   }
-// }
-//
-//
-// // new Customer() — should expect to be initialized with a name and a neighborhoodId. It returns an object that has attributes of id, neighborhoodId, and name.
-// // deliveries() — returns all of the deliveries that customer has received
-// // meals() - returns all meals that a customer has ordered
-// // totalSpent() - returns the total amount that the customer has spent on food.
-//
-//
+
+
+class Customer {
+  constructor(name, neighborhoodId){
+    this.id = ++customerId
+    this.name = name
+    this.neighborhoodId = neighborhoodId
+    store.customers.push(this)
+  }
+
+  deliveries() {
+    return store.deliveries.filter(x => x.customerId === this.id)
+  }
+
+  meals() {
+    return this.deliveries().map(x => x.meal())
+  }
+
+  totalSpent() {
+    return this.meals().reduce((a,b) => a += b.price, 0)
+  }
+}
+
+
+
 // class Customer {
 //   constructor(name, neighborhoodId) {
 //     this.id = ++customerId;
@@ -169,27 +157,6 @@ class Meal {
     }
 }
 
-
-class Customer {
-  constructor(name, neighborhoodId){
-    this.id = ++customerId
-    this.name = name
-    this.neighborhoodId = neighborhoodId
-    store.customers.push(this)
-  }
-
-  deliveries() {
-    return store.deliveries.filter(x => x.customerId === this.id)
-  }
-
-  meals() {
-    return this.deliveries().map(x => x.meal())
-  }
-
-  totalSpent() {
-    return this.meals().reduce((a,b) => a += b.price, 0)
-  }
-}
 
 
 class Delivery {
