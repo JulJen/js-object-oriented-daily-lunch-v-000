@@ -40,23 +40,6 @@ class Neighborhood {
 }
 
 
-class Customer {
-  constructor(name, neighborhoodId) {
-    this.id = ++customerId;
-    this.name = name;
-    if(neighborhood) {
-      this.neighborhoodId = neighborhood.id;
-    }
-
-    store.customers.push(this)
-  }
-  deliveries(){
-    return store.customers.filter(delivery => {
-      return delivery.cutomerId === this.id
-    })
-  }
-}
-
 
 
 class Customer {
@@ -82,7 +65,24 @@ class Customer {
 
 
 
-
+// class Customer {
+//   constructor(name, neighborhoodId) {
+//     this.id = ++customerId;
+//     this.name = name;
+//     if(neighborhood) {
+//       this.neighborhoodId = neighborhood.id;
+//     }
+//
+//     store.customers.push(this)
+//   }
+//   deliveries(){
+//     return store.customers.filter(delivery => {
+//       return delivery.cutomerId === this.id
+//     })
+//   }
+// }
+//
+//
 // // new Meal() — initialized with title and price. It returns an object that has attributes of title, price, and id. Meal Ids should automatically increment.
 // // deliveries() - returns all of the deliveries associated with a particular meal.
 // // customers() - returns all of the customers who have had the meal delivered. Be careful not to return the same customer twice if they have ordered this meal multiple times.
