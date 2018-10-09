@@ -17,7 +17,7 @@ class Neighborhood {
   }
    // Customer belongs to neighborhood
    // A neighborhood has many customers through deliveries
-  customers(){
+  customers() {
     return store.customers.filter(customer => {
       return customer.neighborhood === this.id
     })
