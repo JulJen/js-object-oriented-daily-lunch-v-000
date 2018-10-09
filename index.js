@@ -15,11 +15,14 @@ class Neighborhood {
 
     store.neighborhoods.push(this)
   }
+   // Customer belongs to neighborhood
+   // A neighborhood has many customers through deliveries
   customers(){
     return store.customers.filter(customer => {
       return customer.neighborhood === this.id
     })
   }
+   // A neighborhood has many deliveries
   deliveries(){
     return store.deliveries.filter(delivery => {
       return delivery.neighborhood === this.id
