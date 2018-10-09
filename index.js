@@ -20,7 +20,7 @@ class Neighborhood {
   }
 
   customers() {
-    return store.customers.filter(x => {return x.neighborhoodId === this.id})
+    return store.customers.filter(customer => {return customer.neighborhoodId === this.id})
   }
 
 
