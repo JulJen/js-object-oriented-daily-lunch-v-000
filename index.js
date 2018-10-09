@@ -11,14 +11,14 @@ let mealID = 0
 let customerID = 0
 let deliveryID = 0
 
-//
-// class Neighborhood {
-//   constructor(name) {
-//     this.id = ++neighborhoodId;
-//     this.name = name;
-//
-//     store.neighborhoods.push(this)
-//   }
+
+class Neighborhood {
+  constructor(name) {
+    this.id = ++neighborhoodId;
+    this.name = name;
+
+    store.neighborhoods.push(this)
+  }
 //    // Customer belongs to neighborhood
 //    // A neighborhood has many customers through deliveries
 //   customers() {
