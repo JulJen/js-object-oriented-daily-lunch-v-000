@@ -27,14 +27,14 @@ class Neighborhood {
 
   meals() {
       const customerMeals = this.customers().map(customer => customer.meals());
-      const allMeals = [].concat.apply([], customerMEals);
+      const allMeals = [].concat.apply([], customerMeal);
       return [...new Set(merged)];
     }
 
   deliveries() {
     return store.deliveries.filter(x => x.neighborhoodId === this.id)
   }
-} 
+}
 
 
 //
@@ -136,7 +136,7 @@ class Neighborhood {
 
 
 
-  
+
 
 
 class Meal {
