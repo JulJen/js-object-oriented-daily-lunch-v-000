@@ -29,7 +29,6 @@ class Neighborhood {
     return [...new Set(merged)];
   }
 
-  }
    // A neighborhood has many deliveries
   deliveries(){
     return store.deliveries.filter(delivery => {
