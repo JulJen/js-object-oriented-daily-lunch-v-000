@@ -14,8 +14,8 @@ let deliveryID = 0
 
 class Neighborhood {
   constructor(name) {
-    this.id = ++neighborhoodID,
-    this.name = name,
+    this.id = ++neighborhoodID;
+    this.name = name;
     store.neighborhoods.push(this)
   }
 
@@ -122,15 +122,6 @@ class Neighborhood {
 
 
 
-
-
-
-
-
-
-  // meals() {
-  //   return this.customers().map(x => x.meals())
-  // }
 
   meals() {
       const allMeals = this.customers().map(customer => customer.meals());
