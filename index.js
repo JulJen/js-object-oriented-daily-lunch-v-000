@@ -43,6 +43,29 @@ class Neighborhood {
 
 
 class Customer {
+  constructor(name, neighborhoodId){
+    this.id = ++customerId
+    this.name = name
+    this.neighborhoodId = neighborhoodId
+    store.customers.push(this)
+  }
+
+  deliveries() {
+    return store.deliveries.filter(x => x.customerId === this.id)
+  }
+
+  meals() {
+    return this.deliveries().map(x => x.meal())
+  }
+
+  totalSpent() {
+    return this.meals().reduce((a,b) => a += b.price, 0)
+  }
+}
+
+
+
+class Customer {
   constructor(name, neighborhoodId) {
     this.id = ++customerId;
     this.name = name;
@@ -58,19 +81,6 @@ class Customer {
     })
   }
 }
-
-
-
-  meals() {
-    return this.deliveries().map(x => x.meal())
-  }
-
-  totalSpent() {
-    return this.meals().reduce((a,b) => a += b.price, 0)
-  }
-}
-
-
 
 
 // // new Meal() — initialized with title and price. It returns an object that has attributes of title, price, and id. Meal Ids should automatically increment.
