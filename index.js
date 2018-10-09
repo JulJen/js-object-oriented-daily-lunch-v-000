@@ -11,6 +11,19 @@ let mealID = 0
 let customerID = 0
 let deliveryID = 0
 
+
+class Neighborhood {
+  constructor(name) {
+    this.id = ++neighborhoodID,
+    this.name = name,
+    store.neighborhoods.push(this)
+  }
+
+  customers() {
+    return store.customers.filter(x => {return x.neighborhoodId === this.id})
+  }
+
+
 //
 // class Neighborhood {
 //   constructor(name) {
@@ -114,16 +127,6 @@ let deliveryID = 0
 
 
 
-class Neighborhood {
-  constructor(name) {
-    this.id = ++neighborhoodID
-    this.name = name
-    store.neighborhoods.push(this)
-  }
-
-  customers() {
-    return store.customers.filter(x => {return x.neighborhoodId === this.id})
-  }
 
   // meals() {
   //   return this.customers().map(x => x.meals())
