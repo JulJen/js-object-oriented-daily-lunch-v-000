@@ -114,12 +114,6 @@ class Neighborhood {
 
 
 
-class Neighborhood {
-  constructor(name) {
-    this.id = ++neighborhoodID
-    this.name = name
-    store.neighborhoods.push(this)
-  }
 
   customers() {
     return store.customers.filter(x => {return x.neighborhoodId === this.id})
