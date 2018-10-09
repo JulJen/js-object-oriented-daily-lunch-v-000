@@ -7,6 +7,9 @@ let store = { neighborhoods: [], customers: [],  meals: [], deliveries: [] };
 // meals() - returns a unique list of meals that have been ordered in a particular neighborhood (you might want to do this one last)
 
 let neighborhoodId = 0
+let mealId = 0
+let customerId = 0
+let deliverylId = 0
 
 class Neighborhood {
   constructor(name) {
@@ -43,7 +46,7 @@ class Neighborhood {
 // meals() - returns all meals that a customer has ordered
 // totalSpent() - returns the total amount that the customer has spent on food.
 
-let customerId = 0
+
 
 class Customer {
   constructor(name, neighborhoodId) {
@@ -68,7 +71,7 @@ class Customer {
 // customers() - returns all of the customers who have had the meal delivered. Be careful not to return the same customer twice if they have ordered this meal multiple times.
 // byPrice() - A class method that orders all meal instances by their price in descending order. Use the static keyword to write a class method.
 
-let mealId = 0
+
 
 class Meal {
   constructor(title, price) {
@@ -86,7 +89,7 @@ class Meal {
 // customer() - returns the customer associated with a particular delivery
 // neighborhood() - returns the neighborhood associated with a particular delivery
 
-let deliverylId = 0
+
 
 class Delivery {
   constructor(mealId, neighborhoodId, customerId) {
