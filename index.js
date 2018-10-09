@@ -25,6 +25,17 @@ class Neighborhood {
     });
   }
 
+  meals() {
+      const customerMeals = this.customers().map(customer => customer.meals());
+      const allMeals = [].concat.apply([], customerMEals);
+      return [...new Set(merged)];
+    }
+
+  deliveries() {
+    return store.deliveries.filter(x => x.neighborhoodId === this.id)
+  }
+} 
+
 
 //
 // class Neighborhood {
@@ -125,16 +136,7 @@ class Neighborhood {
 
 
 
-  meals() {
-      const allMeals = this.customers().map(customer => customer.meals());
-      const merged = [].concat.apply([], allMeals);
-      return [...new Set(merged)];
-    }
-
-  deliveries() {
-    return store.deliveries.filter(x => x.neighborhoodId === this.id)
-  }
-}
+  
 
 
 class Meal {
