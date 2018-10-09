@@ -14,7 +14,7 @@ let deliveryId = 0
 
 class Neighborhood {
   constructor(name) {
-    this.id = ++neighborhoodID;
+    this.id = ++neighborhoodId;
     this.name = name;
     store.neighborhoods.push(this)
   }
