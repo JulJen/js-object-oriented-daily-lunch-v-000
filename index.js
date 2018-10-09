@@ -24,7 +24,8 @@ class Neighborhood {
       return customer.neighborhoodId === this.id
     });
   }
-
+  // returns a unique list of meals that have been ordered in a particular neighborhood 
+  //(you might want to do this one last)
   meals() {
       const customerMeals = this.customers().map(customer => customer.meals());
       const allMeals = [].concat.call([], customerMeals);
