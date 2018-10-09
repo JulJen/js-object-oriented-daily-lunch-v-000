@@ -1,15 +1,16 @@
 // global datastore
 let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
-//
-// // new Neighborhood() - initialized with name. It returns an object that has attributes of id and name
-// // deliveries() - returns a list of all deliveries placed in a neighborhood
-// // customers() - returns all of the customers that live in a particular neighborhood
-// // meals() - returns a unique list of meals that have been ordered in a particular neighborhood (you might want to do this one last)
-//
-// let neighborhoodId = 0
-// let mealId = 0
-// let customerId = 0
-// let deliverylId = 0
+
+// new Neighborhood() - initialized with name. It returns an object that has attributes of id and name
+// deliveries() - returns a list of all deliveries placed in a neighborhood
+// customers() - returns all of the customers that live in a particular neighborhood
+// meals() - returns a unique list of meals that have been ordered in a particular neighborhood (you might want to do this one last)
+
+let neighborhoodID = 0
+let mealID = 0
+let customerID = 0
+let deliveryID = 0
+
 //
 // class Neighborhood {
 //   constructor(name) {
@@ -111,10 +112,7 @@ let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
 
 
 
-let neighborhoodID = 0
-let mealID = 0
-let customerID = 0
-let deliveryID = 0
+
 
 class Neighborhood {
   constructor(name) {
